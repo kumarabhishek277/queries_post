@@ -1,0 +1,11 @@
+.login{
+    border: 2px solid #ff0000;
+    width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+body{
+    background-color: #ff0000;
+}
