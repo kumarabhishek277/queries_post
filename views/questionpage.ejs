@@ -7,6 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div style=" border: 2px solid red; width: 800px; margin: 0 auto; padding-left: 15px;">
+        <h1 style="width:fit-content;margin: 15px auto;">Question Page</h1>
+        <div style=""><br>
+            Question: What is the difference between Java and C++? Are both object-oriented?
+        </div>
+        <br>
+        <div id="answers">
+
+        </div>
+        <div style="margin-bottom: 10px;">Answer
+            <input type="text"  id="ans" value="Enter your answer"> 
+            <button type="button" onclick="hello()">POST</button> 
+        </div>
+    </div>
+    <script>
+        function hello(){
+            const temp = document.getElementById("ans").value;
+            console.log(temp);
+            var node = document.createElement("p");                 
+            var textnode = document.createTextNode("Answer : "+temp);         
+            node.appendChild(textnode);                              
+            document.getElementById("answers").appendChild(node); 
+            document.getElementById("ans").value="";
+        }
+    </script>
 </body>
 </html>

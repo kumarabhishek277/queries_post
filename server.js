@@ -14,7 +14,13 @@ app.use(express.urlencoded({extended:false}))
 app.get('/',(req,res)=>{
     return res.render('home');
 })
-
+app.post('/login',(req,res)=>{
+    console.log(req.body)
+    if(req.body.email=="abhish277kumar@gmail.com" && req.body.password == "Abhishek"){
+        return res.render('questionpage');
+    }
+    return res.render('home');
+})
 app.use(expressLayout)
 app.set('views',path.join(__dirname,'/views'))
 
